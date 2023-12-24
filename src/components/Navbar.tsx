@@ -19,9 +19,9 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex items-center space-x-4">
-        <Button size="sm">
+        <Button size="sm" variant="premium">
           Upgrade
-          <Sparkles className="h-4 w-4 fill-white ml-2" />
+          <Sparkles className="h-4 w-4 fill-indigo-800 ml-2" />
         </Button>
         <ThemeToggle />
         <UserButton />
