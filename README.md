@@ -1,1 +1,1 @@
-Learn to create AI Companion Chat from (CodeWithAntonio)[https://www.youtube.com/watch?v=PjYWpd7xkaM] with little bit of improvement, such as `server action` implementation
+Learn to create AI Companion Chat from [CodeWithAntonio](https://www.youtube.com/watch?v=PjYWpd7xkaM) with little bit of improvement, such as `server action` implementation
