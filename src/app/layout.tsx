@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,8 +17,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning={true}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <body className={cn("bg-secondary", inter.className)}>{children}</body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <body className={cn("bg-secondary", inter.className)} suppressHydrationWarning>
+            {children}
+            <Toaster />
+          </body>
         </ThemeProvider>
       </html>
     </ClerkProvider>

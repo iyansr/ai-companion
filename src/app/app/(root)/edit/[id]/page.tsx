@@ -1,15 +1,22 @@
 import db from "@/lib/db";
 import React from "react";
-import CompanionForm from "../_components/companion-form";
+import CompanionForm from "../../_components/companion-form";
+import { auth, redirectToSignIn } from "@clerk/nextjs";
 
 type Props = {
-  companionId: string;
+  params: { id: string };
 };
 
-const DetailCompaionPage = async ({ companionId }: Props) => {
+const DetailCompaionPage = async ({ params: { id } }: Props) => {
+  const { userId } = auth();
+  if (!userId) {
+    return redirectToSignIn();
+  }
+
   const companionPromise = db.companion.findUnique({
     where: {
-      id: companionId,
+      id: id,
+      creatorId: userId,
     },
   });
 
