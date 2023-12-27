@@ -11,19 +11,19 @@ const Sidebar = () => {
   const routes = [
     {
       icon: Home,
-      href: "/app",
+      href: "/",
       label: "Home",
       pro: false,
     },
     {
       icon: PlusIcon,
-      href: "/app/new",
+      href: "/new",
       label: "Create",
       pro: true,
     },
     {
       icon: Settings,
-      href: "/app/settings",
+      href: "/settings",
       label: "Settings",
       pro: false,
     },

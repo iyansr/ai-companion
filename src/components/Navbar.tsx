@@ -24,7 +24,7 @@ const Navbar = () => {
           <Sparkles className="h-4 w-4 fill-indigo-800 ml-2" />
         </Button>
         <ThemeToggle />
-        <UserButton />
+        <UserButton afterSignOutUrl="http://localhost:3123" />
       </div>
     </div>
   );

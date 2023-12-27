@@ -5,7 +5,7 @@ const RootPage = () => {
   return (
     <div>
       <SignInButton>
-        <button>Button</button>
+        <button>SignIn</button>
       </SignInButton>
     </div>
   );
